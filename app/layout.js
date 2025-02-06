@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 const arvo = Arvo({
 	subsets: ["latin"],
-	weight: ["700"],
+	weight: ["400", "700"],
 });
 
 export const metadata = {

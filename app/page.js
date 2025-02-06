@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+
 import Ratings from "./Ratings";
+import Service from "./Service";
 
 export default function Home() {
 	return (
@@ -32,6 +34,23 @@ export default function Home() {
 					text="Succesful repairs"
 					numbers="550+"
 				/>
+
+				<div className="divider" />
+				<Ratings
+					className="successful-repairs"
+					text="Our ratings"
+					numbers="4.95/5 On Google Reviews"
+				/>
+				<div className="divider" />
+				<Ratings
+					className="successful-repairs"
+					text="Recommend our service"
+					numbers="500+"
+				/>
+			</div>
+			<div className="services-page">
+				<div className="services-header">Services for your car</div>
+				<Service />
 			</div>
 		</div>
 	);
