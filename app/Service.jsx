@@ -12,7 +12,6 @@ export default function Service(...data) {
 			<div className="service-text" key={data[0].text}>
 				{data[0].text}
 			</div>
-			{console.log(data[0].text)}
 		</div>
 	);
 }

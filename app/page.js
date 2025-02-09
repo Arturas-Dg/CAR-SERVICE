@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import FormPanel from "./formPanel";
+
 import Ratings from "./Ratings";
 import Service from "./Service";
 
@@ -75,7 +77,7 @@ export default function Home() {
 						<div>+370 000 0000</div>
 						<div>Johnnysauto@gmail.com</div>
 					</div>
-					<div className="form-part">box</div>
+					<FormPanel />
 				</div>
 			</div>
 		</div>
