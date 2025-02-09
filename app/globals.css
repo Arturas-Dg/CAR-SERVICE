@@ -112,6 +112,10 @@ a {
 	font-size: x-large;
 }
 
+.main-button:hover {
+	background-color: rgb(148, 143, 131);
+}
+
 .ratings-panel {
 	display: flex;
 	justify-content: space-around;
@@ -200,6 +204,8 @@ a {
 	padding-right: 5vh;
 	background-color: rgb(217, 217, 217, 0.02);
 	backdrop-filter: blur(5px);
+	border-radius: 8px;
+	border: none;
 }
 
 .contact-info {
@@ -259,6 +265,7 @@ a {
 	background-color: rgb(217, 217, 217);
 	border-radius: 8px;
 	border: none;
+	color: black;
 }
 
 .problem-field {
@@ -269,6 +276,7 @@ a {
 	background-color: rgb(217, 217, 217);
 	border-radius: 8px;
 	border: none;
+	color: black;
 }
 
 .form-button {

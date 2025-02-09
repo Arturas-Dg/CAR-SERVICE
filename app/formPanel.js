@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const FormPanel = () => {
 	const [formData, setFormData] = useState({
@@ -17,18 +18,33 @@ const FormPanel = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		try {
-			const response = await fetch("http://localhost:3008/send-email", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(formData),
-			});
+		const templateParams = {
+			user_name: formData.name,
+			user_phone: formData.phone,
+			user_email: formData.email,
+			user_problem: formData.problem,
+		};
 
-			const result = await response.json();
-			alert(result.message); // Success or error message
+		setFormData({
+			name: "",
+			phone: "",
+			email: "",
+			problem: "",
+		});
+		try {
+			const response = await emailjs.send(
+				"car-service",
+				"template_7b7w2ca",
+				templateParams,
+				"KqvVvecA6yf_VNWgd"
+			);
+			console.log("Email sent successfully!", response);
+			alert(
+				"Message sent successfully! We will contact you in the next 1-5 days"
+			);
 		} catch (error) {
 			console.error("Error sending email:", error);
-			alert("Failed to send email");
+			alert("Failed to send email.");
 		}
 	};
 
