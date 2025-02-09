@@ -4,14 +4,23 @@ import styles from "./page.module.css";
 import Ratings from "./Ratings";
 import Service from "./Service";
 
+import image1 from "../public/air-conditioning.png";
+import image2 from "../public/brakes.png";
+import image3 from "../public/engine.png";
+import image4 from "../public/exhaust.png";
+import image5 from "../public/oil.png";
+import image6 from "../public/tyres.png";
+
 export default function Home() {
+	const images = [];
+
 	return (
 		<div className="pages">
 			<div className="front-page">
 				<div className="main-part">
 					<header className="main-header">
 						<Image
-							src="/car-service-logo-2.png"
+							src="/car-service-logo.png"
 							alt="car service logo"
 							width={120}
 							height={100}
@@ -50,7 +59,14 @@ export default function Home() {
 			</div>
 			<div className="services-page">
 				<div className="services-header">Services for your car</div>
-				<Service />
+				<div className="services">
+					<Service image={image1.src} />
+					<Service image={image2.src} />
+					<Service image={image3.src} />
+					<Service image={image4.src} />
+					<Service image={image5.src} />
+					<Service image={image6.src} />
+				</div>
 			</div>
 		</div>
 	);
