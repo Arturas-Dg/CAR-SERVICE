@@ -4,15 +4,15 @@ import styles from "./page.module.css";
 import Ratings from "./Ratings";
 import Service from "./Service";
 
-import image1 from "../public/air-conditioning.png";
-import image2 from "../public/brakes.png";
-import image3 from "../public/engine.png";
-import image4 from "../public/exhaust.png";
-import image5 from "../public/oil.png";
-import image6 from "../public/tyres.png";
-
 export default function Home() {
-	const images = [];
+	const serviceText = [
+		"Oil & Filter Change, Fluid Level Checks & Top-Ups, Seasonal Car Checkups (Winter/Summer Preparation)",
+		"Engine Repair & Tune-Ups, Transmission Repair & Fluid Change, Timing Belt & Chain Replacement, Fuel System Cleaning",
+		"Brake Pad & Rotor Replacement, Brake Fluid Flush, ABS System Diagnostics,  Wheel Alignment & Balancing",
+		"Tire Rotation & Balancing, Tire Replacement & Installation, Wheel Alignment, Flat Tire Repair",
+		"AC System Recharge & Repair, Heating System Diagnostics, Cabin Air Filter Replacement",
+		"Exhaust System Repair,  Muffler Replacement, Catalytic Converter Repair, Emission Testing & Inspection",
+	];
 
 	return (
 		<div className="pages">
@@ -60,12 +60,22 @@ export default function Home() {
 			<div className="services-page">
 				<div className="services-header">Services for your car</div>
 				<div className="services">
-					<Service image={image1.src} />
-					<Service image={image2.src} />
-					<Service image={image3.src} />
-					<Service image={image4.src} />
-					<Service image={image5.src} />
-					<Service image={image6.src} />
+					<Service image="/oil.png" text={serviceText[0]} />
+					<Service image="/engine.png" text={serviceText[1]} />
+					<Service image="/brakes.png" text={serviceText[2]} />
+					<Service image="/tyres.png" text={serviceText[3]} />
+					<Service image="/air-conditioning.png" text={serviceText[4]} />
+					<Service image="/exhaust.png" text={serviceText[5]} />
+				</div>
+			</div>
+			<div className="contact-page">
+				<div className="contact-part">
+					<div className="contact-info">
+						<div className="contact-us-text">Contact us</div>
+						<div>+370 000 0000</div>
+						<div>Johnnysauto@gmail.com</div>
+					</div>
+					<div className="form-part">box</div>
 				</div>
 			</div>
 		</div>

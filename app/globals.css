@@ -145,7 +145,7 @@ a {
 }
 
 .services-header {
-	margin-top: 40px;
+	margin: 40px;
 	font-size: xx-large;
 	font-family: "Arvo", sans-serif;
 	font-weight: 700;
@@ -160,7 +160,7 @@ a {
 .service {
 	background-color: rgb(33, 33, 33);
 	width: 25vw;
-	height: 20vh;
+	height: 25vh;
 }
 
 .service-image {
@@ -168,6 +168,51 @@ a {
 	height: 70px;
 	margin-top: 20px;
 	margin-left: 20px;
+}
+
+.service-text {
+	font-family: "Arvo", serif;
+	font-size: 22px;
+	margin-left: 30px;
+}
+
+.contact-page {
+	display: flex;
+	justify-content: right;
+	background-image: url("/contact-page-bg.jpg");
+	background-color: rgb(33, 33, 33, 0.5);
+	width: 100vw;
+	height: 700px;
+	background-size: 140%;
+	background-position: 100% 70%;
+	background-blend-mode: multiply;
+}
+
+.contact-part {
+	display: flex;
+	width: 50vw;
+	max-height: 700px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	margin-right: 5vh;
+	padding-right: 5vh;
+	background-color: rgb(217, 217, 217, 0.02);
+	backdrop-filter: blur(5px);
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-family: "Arvo", serif;
+	font-size: 25px;
+	height: 200px;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.contact-us-text {
+	font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
