@@ -76,16 +76,18 @@ a {
 	max-width: 50vw;
 	height: 15vh;
 	font-family: "Roboto", sans-serif;
-	font-size: x-large;
+	font-size: 2vw;
 }
 
 .main-logo {
 	margin-right: 30px;
+	width: 5vw;
+	height: 5vw;
 }
 
 .main-phrase {
 	font-family: "Arvo", serif;
-	font-size: 300%;
+	font-size: 2.9vw;
 	font-weight: bold;
 	margin-left: 4vw;
 	margin-top: 20vh;
@@ -95,7 +97,7 @@ a {
 .main-text {
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 1.7vw;
 	margin-left: 4vw;
 	margin-right: 4vw;
 	margin-top: 10vh;

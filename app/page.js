@@ -37,7 +37,7 @@ export default function Home() {
 				<div className="main-part">
 					<header className="main-header">
 						<Image
-							src="/car-service-logo.png"
+							src="/logo.png"
 							alt="car service logo"
 							width={120}
 							height={100}
