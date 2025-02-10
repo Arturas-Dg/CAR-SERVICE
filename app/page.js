@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useRef } from "react";
 
 import FormPanel from "./formPanel";
 
@@ -15,6 +18,18 @@ export default function Home() {
 		"AC System Recharge & Repair, Heating System Diagnostics, Cabin Air Filter Replacement",
 		"Exhaust System Repair,  Muffler Replacement, Catalytic Converter Repair, Emission Testing & Inspection",
 	];
+
+	const formRef = useRef(null); // Create a ref for the FormPanel
+
+	const handleScrollToForm = () => {
+		if (formRef.current) {
+			formRef.current.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
+	function checkButton() {
+		console.log("Clicked!");
+	}
 
 	return (
 		<div className="pages">
@@ -36,7 +51,9 @@ export default function Home() {
 						reliable repairs, smooth rides, stress-free maintenance, and happy
 						customers
 					</h3>
-					<button className="main-button">Register</button>
+					<button className="main-button" onClick={handleScrollToForm}>
+						Register
+					</button>
 				</div>
 			</div>
 			<div className="ratings-panel">
@@ -70,7 +87,7 @@ export default function Home() {
 					<Service image="/exhaust.png" text={serviceText[5]} />
 				</div>
 			</div>
-			<div className="contact-page">
+			<div className="contact-page" ref={formRef}>
 				<div className="contact-part">
 					<div className="contact-info">
 						<div className="contact-us-text">Contact us</div>
